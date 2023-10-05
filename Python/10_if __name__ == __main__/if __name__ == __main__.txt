@@ -1,0 +1,28 @@
+In Python, the if __name__ == "__main__": construct is used to check whether a Python script is being run as the main program or if 
+it is being imported as a module into another script. 
+This construct is commonly used to define a block of code that should only run when the script is executed directly, 
+and not when it is imported as a module.
+
+Here's how it works:
+
+When you run a Python script directly (e.g., using python script.py in the command line), 
+Python sets a special built-in variable called __name__ to "__main__" for the script that is being executed.
+
+When a Python script is imported as a module into another script, 
+the __name__ variable for the imported script is set to the name of the script (i.e., not "__main__").
+
+By using if __name__ == "__main__":, you can specify a block of code that should only execute when the script is run directly, 
+and not when it's imported as a module. This is commonly used for script initialization and execution of main program logic. 
+
+Here's an example:
+# This code block will only execute if this script is run directly
+if __name__ == "__main__":
+    print("This script is being run directly.")
+else:
+    print("This script is being imported as a module into another script.")
+
+When you run this script directly, you will see the output: 
+"This script is being run directly." 
+However, if you import this script as a module into another script, you will see the output: 
+"This script is being imported as a module into another script." 
+This allows you to reuse code from one script in another while controlling the execution of specific parts of the code.
