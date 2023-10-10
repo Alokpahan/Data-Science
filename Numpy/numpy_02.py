@@ -1,13 +1,26 @@
 import numpy as np
 
+# NumPy Creating Arrays and indexing
+
 # 1 dimensional array
 a = np.array([5, 6, 7])
 
 # Display array type, number of dimensions, and the array itself
 print("1-D array:")
 print(type(a))
-print(a.ndim)
+print("Dimensional of an array:",a.ndim)
+print("Byte size of each element of an array",a.itemsize)    # byte size  as each element is integer type 
 print(a)
+print("The size of an array: ",a.size) # printing the total no of size of an array
+# shape property
+print("The information on dimensions(like width and height): ",a.shape)
+
+b = np.array([50, 60, 70],dtype=np.float64)                  # consider the another array to convert it into 8 bytesa
+print("Byte size of each element of an array",b.itemsize)     
+print(b)
+print("The size of an array: ",b.size) # printing the total no of size of an array
+# shape property
+print("The information on dimensions(like width and height): ",b.shape)
 
 print("Printing using positive indexing:")
 print(a[0])
@@ -42,6 +55,7 @@ b2 = np.array([[1, 2, 9], [3, 4, 7], [5, 6, 8]])
 print("\n2-D array b2:")
 print("Printing using positive indexing:")
 print(b2)
+print("The information on dimensions(like width and height): ",b2.shape)
 print(b2[0, 0])
 print(b2[0, 1])
 print(b2[0, 2])
