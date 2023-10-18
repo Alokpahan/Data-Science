@@ -55,3 +55,35 @@ print("\n",s1)
 print("\n",s2)    
 print("Vertical stacking: \n",np.vstack((s1,s2)))
 print("Horizontal stacking: \n",np.hstack((s1,s2)))
+
+# spliting the arrays
+ 
+s3=np.arange(30).reshape(2,15)
+print("\n",s3) 
+print("Spliting the above single array into 3 different arrays by using horizontal split: \n",np.hsplit(s3,3))
+result=np.hsplit(s3,3)
+print("1st Array \n",result[0])
+print("2nd Array \n",result[1])
+print("3rd Array \n",result[2])
+
+print("\n")
+
+print("Spliting the above single array into 3 different arrays by using vertical split: \n",np.vsplit(s3,2))
+result1=np.vsplit(s3,2)
+print("1st Array \n",result1[0])
+print("2nd Array \n",result1[1])
+
+# Indexing with boolean array
+# Create a 2D numpy array
+s4 = np.arange(12).reshape(3, 4)
+print("Array s4:\n", s4)
+
+# Create a boolean array 'b' by comparing each element in 's4' with the condition s4 > 4
+b = s4 > 4
+
+# 'b' is a boolean array that represents the condition s4 > 4 element-wise
+print(b)
+
+# Indexing with a boolean array 'b' to select elements from 's4' where 'b' is True
+# This effectively filters out elements that satisfy the condition s4 > 4
+print(s4[b])
